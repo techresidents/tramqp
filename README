@@ -1,0 +1,8 @@
+Tech Residents AMQP Library
+
+INSTALL:
+pip install git+ssh://dev.techresidents.com/tr/repos/techresidents/lib/python/tramqp#egg=tramqp
+
+DEVELOPMENT
+mkvirtualenv tramqp
+python setup.py develop
