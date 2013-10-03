@@ -1,3 +1,3 @@
 haigha==0.6.1
 
-git+ssh://dev.techresidents.com/tr/repos/techresidents/lib/python/trpycore.git@0.12.0#egg=trpycore
+git+ssh://dev.techresidents.com/tr/repos/techresidents/lib/python/trpycore.git@integration.0#egg=trpycore

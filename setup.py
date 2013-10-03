@@ -25,9 +25,9 @@ setup(
         'Topic :: Utilities',
         ],
     install_requires=[
-        'trpycore>=0.12.0'
+        'trpycore>=0.13.0'
     ],
     dependency_links=[
-        'git+ssh://dev.techresidents.com/tr/repos/techresidents/lib/python/trpycore.git@0.12.0#egg=trpycore-0.12.0'
+        'git+ssh://dev.techresidents.com/tr/repos/techresidents/lib/python/trpycore.git@0.13.0#egg=trpycore-0.13.0'
     ],
 )
