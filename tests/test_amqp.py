@@ -84,7 +84,6 @@ class TestQueue(unittest.TestCase):
         time.sleep(1)
 
         self.publish_queue.put('a')
-        self.consume_queue.connection.close()
         with self.consume_queue.get() as m:
             self.assertEqual('a', m.body)
 
