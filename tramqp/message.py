@@ -3,6 +3,7 @@ import json
 from tramqp.encode import Encoder
 
 class Header(object):
+    """Message Header class"""
     @classmethod
     def parse(cls, data):
         if isinstance(data, basestring):
@@ -15,7 +16,14 @@ class Header(object):
                 routing_key=json_data.get("routing_key"),
                 timestamp=json_data.get("timestamp"))
 
-    def __init__(self, sender=None, routing_key=None,timestamp=None):
+    def __init__(self, sender=None, routing_key=None, timestamp=None):
+        """Header constructor
+
+        Args:
+            sender: arbitrary string to identify sender to recepient
+            routing_key: amqp routing_key for message
+            timestamp: timestamp when message was sent
+        """
         self.sender = sender
         self.timestamp = timestamp
         self.routing_key = routing_key
@@ -34,6 +42,7 @@ class Header(object):
         }
 
 class Message(object):
+    """Message class"""
     @classmethod
     def parse(cls, data):
         if isinstance(data, basestring):
@@ -46,6 +55,12 @@ class Message(object):
                 body=json_data.get("body"))
 
     def __init__(self, body, header=None):
+        """Message constructor
+
+        Args:
+            body: json serializable body
+            header: message header object
+        """
         self.header = header or Header()
         self.body = body
 

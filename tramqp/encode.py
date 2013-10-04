@@ -2,6 +2,7 @@ import json
 import datetime
 
 class Encoder(json.JSONEncoder):
+    """JSON encoder"""
     def __init__(self, *args, **kwargs):
         super(Encoder, self).__init__(*args, **kwargs)
 
